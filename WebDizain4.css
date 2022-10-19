@@ -1,0 +1,144 @@
+*{box-sizing:border-box;
+}
+body{margin:0px;
+  min-height:100vh;
+}
+
+
+
+
+    .sve{display:grid;
+    min-height:100vh;
+    grid-template-columns:repeat(5,1fr);
+    grid-template-rows:repeat(7,1fr);
+    grid-template-areas:
+    "a a a a a "
+    "c c c c c "
+    ". b d d ."
+    ". b d d ."
+    ". b d d ."
+    ". b d d ."
+    ". b d d ."
+    ". b d d ." 
+    "j j j j j "
+    
+  ;}
+
+
+
+
+
+
+
+
+/* Navigacioni bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgba(8, 8, 6, 0.801);
+}
+  li {
+    float:right;
+    margin-right:1.5vw;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding:1.5vw;
+    margin:0px;
+    text-decoration: none;
+  }
+  /* hover i aktiv za linkove */
+  a:hover{box-shadow: inset 0 -5px 0 0  #1c87c9;
+  }
+  
+    a:active{background-color:#1c87c9;}
+    .plava{background-color:#1c87c9;}
+  /* Slika loga */
+  .img1{
+      margin-left:40px;
+      margin-right:40px;
+      border-radius: 50%;
+      height:55px;
+      width:62px;
+  }
+  /* slika autora */
+  .img2{height:320px;
+width:320px;
+border-radius:50%;}
+
+   /* zastave */
+   .img3{height:45px;
+    width:55px;
+    padding:7px;
+    margin:auto;
+  }
+  /* header */
+  .header
+ { grid-area:a;
+  }
+   /* footer */
+   .footer{grid-area:j;
+    display:inline-block;
+    background-color:rgba(8, 8, 6, 0.801);
+    height:8vh;
+    color: white;
+    text-align: center;}
+  /* divovi */
+  .drugi{grid-area:b;}
+  .prvi{grid-area:c;
+text-align: center;}
+.treci{grid-area:d;}
+h3{margin-left:25px;}
+
+
+@media screen and (max-width:668px){
+
+  li {width:100%;
+    float:right;
+    margin-right:1.5vw;
+  }
+}
+
+
+
+
+
+@media screen and (max-width:600px) {
+  .sve{display:grid;
+    min-height:100vh;
+    grid-template-columns:repeat(5,1fr);
+    grid-template-rows:repeat(5,1fr);
+    grid-template-areas:
+    "a a a a a "
+    "c c c c c "
+    "b b b b b"
+    "b b b b b"
+    "d d d d d"
+    "j j j j j "
+    
+  ;}
+  
+}
+@media screen and (max-width:330px) {
+  .sve{display:grid;
+    min-height:100vh;
+    grid-template-columns:repeat(5,1fr);
+    grid-template-rows:repeat(5,1fr);
+    grid-template-areas:
+    "a a a a a "
+    "c c c c c "
+    "b b b b b"
+    "b b b b b"
+    "d d d d d"
+    "j j j j j "
+    
+  ;}
+  .img2{height:300px;
+    width:300px;
+    border-radius:50%;}
+}

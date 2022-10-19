@@ -1,0 +1,33 @@
+<hmtl>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var broj = prompt("unesite jedan trocifren broj:");
+            if(broj > 99 && broj < 1000)
+            {
+                var brojStr = broj.toString();
+                var niz = brojStr.split('');
+                var suma = 0;
+                for(let i=0;i<niz.length;i++)
+                {
+                    suma += niz[i];
+                }
+
+                    if(suma % 7 == 0)
+                    {
+                        alert("Broj je savrsen!");
+                    }
+                    else
+                    {
+                        alert("Broj nije savrsen!");
+                    }
+                }
+            else
+            {
+                alert("Uneli ste broj koji nije trocifren");
+            }
+        </script>
+    </body>
+</hmtl>

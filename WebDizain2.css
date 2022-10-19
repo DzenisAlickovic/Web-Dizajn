@@ -1,0 +1,187 @@
+*{box-sizing:border-box;
+}
+body{margin:0px;
+  min-height:100vh;
+}
+
+.svet{display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:repeat(2,);
+grid-template-areas:
+"a a a a"
+"b b b b"
+;}
+
+.svet1{display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:repeat(2,);
+grid-template-areas:
+"a a a a"
+;}
+
+.sve{display:grid;
+grid-auto-flow:dense;
+padding:0px;
+min-height:100vh;
+grid-template-columns:repeat(6,1fr);
+grid-auto-rows:200px 300px;
+grid-gap:0px;
+
+
+
+;}
+
+
+/* Navigacioni bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgba(8, 8, 6, 0.801);
+  }
+  
+  li {
+    float:right;
+    margin-right:1.5vw;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding:1.5vw;
+    margin:0px;
+    text-decoration: none;
+  }
+  /* Slika loga */
+  .img1{
+      margin-left:40px;
+      margin-right:40px;
+      border-radius: 50%;
+      height:55px;
+      width:62px;
+  }
+  /* hover i aktiv za linkove */
+
+  a:hover{box-shadow: inset 0 -5px 0 0  #1c87c9;
+  }
+    a:active{background-color:#1c87c9;}
+    .plava{background-color:#1c87c9;}
+  /* sve slike na levoj strani */
+  .img2{
+    padding:3vh;
+    width:100%;
+    height:40vh;
+}
+ 
+  /* zastave */
+  .img3{height:45px;
+    width:55px;
+    padding:7px;
+    margin:auto;
+  }
+ 
+  /* header */
+  .header
+ { grid-area:a;
+    
+    }
+    /* footer */
+    .footer{grid-area:a;
+        display:inline-block;
+        background-color:rgba(8, 8, 6, 0.801);
+        height:8vh;
+        color: white;
+        text-align: center;}
+  /* divovi */
+  .t1{text-align:center;
+    grid-area:b;
+}
+.omotac{margin:10px;
+padding:0px;
+text-align: center;
+
+}
+
+.item{height:100%;
+width:100%;
+position: relative;}
+
+.item .prvi{height:100%;
+    width:100%;
+overflow: hidden;}
+
+.item .prvi img{height:100%;
+    width:100%;
+object-fit:cover;
+object-position:50% 50%;
+cursor: pointer;
+transition:.5s ease-in-out;}
+
+.item:hover .prvi img{transform:scale(1,2);
+}
+
+.item .text{opacity:0;
+position: absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:white;
+font: size 25px;
+pointer-events:none;
+z-index:4;
+transition:0.3s ease-in-out;
+}
+.item:hover .text{opacity:1;
+animation: idi-dole .3s linear;
+padding: 1em;
+width:100%;
+backdrop-filter:blur(5px) saturate(1.8);
+}
+/* span divovi */
+.w-3{grid-column:span 3;}
+
+.w-2{grid-column:span 2;}
+
+.w-4{grid-column:span 4;}
+.h-2{grid-row:span 2;}
+.h-3{grid-row:span 3;}
+.h-4{grid-row:span 4;}
+/* zastave kursor */
+
+.a1{cursor:pointer;}
+
+/* responsive */
+
+@media screen and (max-width:668px){
+
+  li {width:100%;
+    float:right;
+    margin-right:1.5vw;
+  }
+}
+
+
+@media screen and (max-width:600px) {
+    .sve{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .w-2,.w-3,.w-4{grid-column: span 1;}
+}
+/* Animacija */
+@keyframes idi-dole{
+
+0%{
+    top:10%
+}
+50%{
+top:35%;
+}
+100%{
+    top:50%;
+}
+
+
+
+}

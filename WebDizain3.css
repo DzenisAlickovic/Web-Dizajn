@@ -1,0 +1,120 @@
+*{box-sizing:border-box;
+}
+body{margin:0px;
+  min-height:100vh;
+}
+/* Navigacioni bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgba(8, 8, 6, 0.801);
+  }
+  
+  li {
+    float:right;
+    margin-right:1.5vw;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding:1.5vw;
+    margin:0px;
+    text-decoration: none;
+  }
+  /* Slika loga */
+  .img1{
+      margin-left:40px;
+      margin-right:40px;
+      border-radius: 50%;
+      height:55px;
+      width:62px;
+  }
+  /* hover i aktiv za linkove */
+  a:hover{box-shadow: inset 0 -5px 0 0  #1c87c9;
+  }
+    a:active{background-color:#1c87c9;}
+    .plava{background-color:#1c87c9;}
+
+  /* zastave */
+  .img3{height:45px;
+    width:55px;
+    padding:7px;
+    margin:auto;
+  }
+  /* email i telefon */
+  .img2{height:25px;
+width:24px;
+
+margin-right:5px;}
+  /* header */
+  .header
+ { grid-area:a;
+  }
+  /* divovi */
+  .sve{display:grid;
+      grid-template-columns: repeat(5,1fr);
+grid-template-rows: repeat(10,);
+grid-template-areas:
+"a a a a a"
+"c c c c c"
+". b b b ."
+". b b b ."
+". b b b ."
+". b b b ."
+"d d d d d"
+". e e e ."
+". e e e ."
+"j j j j j"
+
+
+
+;}
+  
+.prvi{text-align:center;
+grid-area:c;}
+
+.drugi{grid-area:b;}
+.treci{grid-area:d;
+text-align:center}
+
+.cetvrti{grid-area:e;
+text-align:center;
+border:1px solid black;
+margin:0px;}
+
+/* Forma */
+fieldset{padding:5px;
+}
+input[type=text]{padding:7px;
+    width:100%;
+margin:3px;}
+input[type=submit]{margin:2px;
+    padding:7px;
+width:100%;
+background-color: #1c87c9;
+color:white;
+border-radius:5px;
+}
+input[type=email]{padding:7px;
+    width:100%;
+margin:3px;}
+input[type=tel]{padding:7px;
+    width:100%;
+margin:3px;}
+textarea{padding:5px;
+  width:100%;}
+
+  /* responsive */
+
+  @media screen and (max-width:668px){
+
+    li {width:100%;
+      float:right;
+      margin-right:1.5vw;
+    }
+  }
+  

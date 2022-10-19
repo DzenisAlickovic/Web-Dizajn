@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<hmtl>
+    <head>
+    </head>
+    <body>
+        <script>
+            var text = "Januar je prvi mesec u godini. Januar je mesec u kojem polazemo ispite. Neki cemo ispit i da padnemo. Kada se zavrsi januar sledi februarski rok.";
+            var text = text.split('.');
+            text.pop();
+            // odvojeno.forEach(n => n.toUpperCase());  Ako ne koristimo /i onda koristimo toUpperCase()
+            var pomocni = [];
+            var uzorak = /JANUAR/i; // case Insensitive - sva slova posmatra kao jednaka
+            for(let i=0; i<text.length; i++){
+                if(text[i].match(uzorak)){
+                    pomocni.push(text[i]);
+                }
+            }
+            document.write(pomocni);
+        </script>
+    </body>
+</hmtl>

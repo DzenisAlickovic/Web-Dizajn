@@ -1,0 +1,23 @@
+<hmtl>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var text = "Kada je ispit? Ispit ce se odrzati sutra prema objaveljnom rasporedu. Nista necemo stici!";
+            var textarray = text.split(/[?!.]/);
+            var max = textarray[0];
+            console.log(textarray);
+            console.log(max);
+            console.log(textarray.length);
+            for(let i=0;i<textarray.length;i++)
+            {
+                if(textarray[i].length > max.length)
+                {
+                    max = textarray[i];
+                }
+            }
+            document.write(max);
+        </script>
+    </body>
+</hmtl>

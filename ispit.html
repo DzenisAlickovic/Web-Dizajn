@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var text = "Kada pocinje ispit? Koji je rok? Da li je obiman ispit? Da li smo polozili?"; // UZEO SAM GOTOV NIZ, MOGLI SMO I SA PROMPTA
+        var textarray = text.split('?');    // odvojimo funkcijom split sve upitne recenice, split ce string text podeliti tako sto rastavi na delove gde vidi upitnik
+        textarray.pop();    // jer ce split('?') da ostavi prazan string kao poslednji element
+        
+        daliimaispit = function(){  // funkcija kojom se sve recenice teksta koje sadrze rec ispit smestaju u pomocni niz
+            var sadrziispit = [];   // pomocni niz
+            var uzorak = /ispit/;   //regex uzorak
+            for(let i=0; i<textarray.length;i++){
+                if(textarray[i].match(uzorak)){     // regex provera
+                    sadrziispit.push(textarray[i]); // ukoliko ispunjava uslov, dodajemo u pomocni niz
+                }
+            }
+                return sadrziispit;     // vracamo niz jer nam treba za finalnu fju
+        }
+
+        odredinajveci = (txt) => {
+            var n = daliimaispit(txt);  // iz fje iznad dobijamo sve elemente koji sadrze rec ispit
+            if(n.length > 0){   // ukoliko je duzina niza veca od nule znaci da ima recenica koje sadrze rec ispit
+                n.sort(function(a,b){   // sortiramo po funkciji b-a kako bismo dobili opadajuci poredak
+                    return b.trim().length - a.trim().length;   // trim funkcija ce da ukloni prazan prostor tj. " " sa pocetka i kraja
+                })
+                document.write(`Najveca recenica koja sadrzi rec 'ispit' je : ${n[0]}?`); // ispis prvog elementa sortiranog niza
+            }
+        }
+
+        odredinajveci(textarray);   // poziv fje
+
+    </script>
+</body>
+</html>

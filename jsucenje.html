@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+   <!--  --
+      /*
+
+      * 4)];
+Math.floor(Math.random() * 4) will give us a random number
+ from 0 to 3. We’ll use this number to index the cards array,
+ and assign the value of currentCard to a random element from that array.
+function pozdrav()
+{
+    
+    const selector = document.querySelector("h1");
+ if    (selector.innerHTML === 'Pozdrav'){
+     selector.innerHTML = "Zdravo zdravo";
+ }
+ else{
+     selector.innerHTML = 'Pozdrav';
+ }
+}
+
+
+    
+    */
+</head>
+<body>
+    <h1>Pozdrav</h1>
+    <!-- <button onclick="pozdrav()">Klikni ovde</button> -->
+ 
+    <script>
+let text = "Sada Tajra spava mnogo voli Daja.Nejra se budi i bas se zacudi.gleda gde je Tajra";
+let niz = text.split(".");
+let tajra = [];
+let regex = /TAJRA/i;
+for(let i=0;i<niz.length;i++){
+if(niz[i].match(regex)){
+
+  tajra.push(niz[i]);  
+}
+}
+document.write(tajra);
+
+
+    </script>
+</body>
+</html>

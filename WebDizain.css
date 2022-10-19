@@ -1,0 +1,175 @@
+*{box-sizing:border-box;
+}
+body{margin:0px;
+  min-height:100vh;
+}
+
+
+
+
+    .sve{display:grid;
+    min-height:100vh;
+    grid-template-columns:repeat(7,1fr);
+    grid-template-rows:repeat(16,);
+    grid-template-areas:
+    "a a a a a a a"
+    ". b b b b b ."
+    ". b b b b b ."
+    ". b b b b b ."
+    ". c c d d d ."
+    ". c c d d d ."
+    ". c c d d d ."
+    ". c c d d d ."
+    ". e e f f f ."
+    ". e e f f f ."
+    ". e e f f f ."
+    ". e e f f f ."
+    ". g g h h h ."
+    ". g g h h h ."
+    ". g g h h h ."
+    ". g g h h h ."
+    "j j j j j j j"
+  ;}
+
+
+
+
+
+
+
+
+/* Navigacioni bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgba(8, 8, 6, 0.801);
+  }
+  
+  li {
+    float:right;
+    margin-right:1.5vw;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding:1.5vw;
+    margin:0px;
+    text-decoration: none;
+  }
+  /* hover i aktiv za linkove */
+  a:hover{box-shadow: inset 0 -5px 0 0  #1c87c9;
+  }
+  
+    a:active{background-color:#1c87c9;}
+    .plava{background-color:#1c87c9;}
+  /* Slika loga */
+  .img1{
+      margin-left:40px;
+      margin-right:40px;
+      border-radius:50%;
+      height:55px;
+      width:62px;
+  }
+  /* sve slike na levoj strani */
+  .img2{
+    padding:3vh;
+    width:100%;
+    height:40vh;
+}
+ 
+  /* zastave */
+  .img3{height:45px;
+    width:55px;
+    padding:7px;
+    margin:auto;
+  }
+  /* header */
+  .header
+ { margin:0px;
+   grid-area:a;
+  }
+  /* Prvi Div text po sredini*/
+ .prvi {grid-area:b;
+    text-align:center;
+ }
+ /* svi divovi izmedju prvog i footera */
+    
+.drugi{grid-area: c;}
+
+.treci{grid-area:d;
+text-align:justify;}
+.cetvrti{grid-area:e;}
+.peti{grid-area:f;
+text-align:justify;}
+.sesti{grid-area:g;}
+.sedmi{grid-area:h;
+text-align:justify;}
+
+/* dugme linkovano na destinacije */
+.Dugme {
+    background-color: #1c87c9;
+    border-radius:20%;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;}
+    /* footer */
+    .footer
+    {grid-area:j;
+      display:inline-block;
+        background-color:rgba(8, 8, 6, 0.801);
+        height:8vh;
+        color: white;
+        text-align: center;
+    }
+@media screen and (max-width:668px){
+
+  li {width:100%;
+    float:right;
+    margin-right:1.5vw;
+  }
+}
+
+    @media  screen and (max-width: 600px){
+      .sve{
+        display:grid;
+    min-height:100vh;
+    grid-template-columns:repeat(7,1fr);
+    grid-template-rows:repeat(17,fr1);
+    grid-template-areas:
+    "a a a a a a a"
+    "b b b b b b b"
+    "b b b b b b b"
+    "b b b b b b b"
+    ". c c c c c ."
+    ". c c c c c ."
+    ". d d d d d ."
+    ". d d d d d ."
+    ". e e e e e ."
+    ". e e e e e ."
+    ". f f f f f ."
+    ". f f f f f ."
+    ". g g g g g ."
+    ". g g g g g ."
+    ". h h h h h ."
+    ". h h h h h ."
+    "j j j j j j j"
+  
+    ;}
+
+    }
+    
+
+
+
+
+    

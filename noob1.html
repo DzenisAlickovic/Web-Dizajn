@@ -1,0 +1,25 @@
+<hmtl>
+    <head>
+
+    </head>
+    <body>
+        <script>
+    var text = "Kada pocinje ispit? Eeeej! Koji je rok? Ispit je bas tezak! Da li je obiman ispit? Polozicemo! Da li smo polozili?";
+            var textarray = text.split(/([!,?])/);
+            var niz = [];
+            for(let i=0;i<textarray.length;i++)
+            {
+                if(textarray[i] == '?')
+                {
+                    niz.push(textarray[i-1]);
+                }
+            }
+            document.write("Upitne recenice su: <br>")
+            for(let i=0;i<niz.length;i++)
+            {
+                document.write(niz[i] + "?");
+            }
+            class {};
+        </script>
+    </body>
+</hmtl>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let text = "Danas na, je divan dan! Danas ce Dzenis da polozi ispit zar ne? Naravno da hoce!  Da li smo polozili?";
+let niz =text.split(/([!?])/);
+niz.pop();
+let novi = [];
+for(let i=0;i<niz.length;i++){
+    if(niz[i].includes("?")){
+novi.push(niz[i-1])
+    }
+}
+console.log(niz);
+console.log(novi);
+document.write("Upitne recenice su: <br>")
+            for(let i=0;i<novi.length;i++)
+            {
+                document.write(novi[i] + "?");
+            }
+    </script>
+    
+</body>
+</html>
